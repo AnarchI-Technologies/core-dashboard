@@ -4,6 +4,7 @@
   --paper: #f6f4ee;
   --line: #d8d1c3;
   --panel: #fffdf8;
+  --shadow: rgba(21, 20, 17, 0.12);
   --red: #b63b2f;
   --green: #2d6b57;
   --gold: #ba8b2d;
@@ -76,7 +77,7 @@ h1 {
 
 .status-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1px;
   margin: 28px 0;
   overflow: hidden;
@@ -88,6 +89,16 @@ h1 {
   min-height: 160px;
   padding: 20px;
   background: rgba(255, 253, 248, 0.88);
+}
+
+.metric.accent {
+  background: var(--ink);
+  color: var(--panel);
+}
+
+.metric.accent .metric-label,
+.metric.accent small {
+  color: rgba(255, 253, 248, 0.72);
 }
 
 .metric strong {
@@ -133,6 +144,7 @@ h1 {
   padding: 24px;
   border: 1px solid var(--line);
   background: rgba(255, 253, 248, 0.8);
+  box-shadow: 0 24px 70px var(--shadow);
 }
 
 .panel-header {
@@ -199,6 +211,35 @@ h1 {
   line-height: 1.45;
 }
 
+.proof-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.proof-strip article {
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: rgba(21, 20, 17, 0.92);
+  color: var(--panel);
+}
+
+.proof-strip span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.proof-strip strong {
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
 @media (max-width: 860px) {
   .topbar,
   .panel-header {
@@ -232,7 +273,8 @@ h1 {
 
   .status-grid,
   .flow,
-  .rail {
+  .rail,
+  .proof-strip {
     grid-template-columns: 1fr;
   }
 

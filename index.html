@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Presentation-safe operating dashboard prototype for AnarchI Technologies.">
     <title>AnarchI Core Dashboard</title>
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -16,7 +17,7 @@
         <p class="brand-line">Hardcoding freedom into the systems of tomorrow.</p>
       </header>
 
-      <section class="status-grid" aria-label="Operating status">
+      <section class="status-grid" aria-label="Operating status" data-validate="status-grid">
         <article class="metric">
           <span class="metric-label">System posture</span>
           <strong>Structured</strong>
@@ -37,6 +38,11 @@
           <strong>Public safe</strong>
           <small>No private runtime state or account data.</small>
         </article>
+        <article class="metric accent">
+          <span class="metric-label">IP posture</span>
+          <strong>Logged</strong>
+          <small>Authored systems, scripts, and tests are treated as AnarchI proof assets.</small>
+        </article>
       </section>
 
       <section class="workspace" aria-label="System map">
@@ -47,7 +53,7 @@
           <button type="button">Controls</button>
         </div>
 
-        <div class="panel">
+        <div class="panel" data-validate="operating-model">
           <div class="panel-header">
             <div>
               <p class="eyebrow">Operating model</p>
@@ -79,6 +85,21 @@
             </article>
           </div>
         </div>
+      </section>
+
+      <section class="proof-strip" aria-label="Proof and validation">
+        <article>
+          <span>Repair</span>
+          <strong>Codebase state reviewed before presentation.</strong>
+        </article>
+        <article>
+          <span>Test</span>
+          <strong>Validation scripts become documented project IP.</strong>
+        </article>
+        <article>
+          <span>Polish</span>
+          <strong>Public shell stays useful without leaking live systems.</strong>
+        </article>
       </section>
     </main>
   </body>
