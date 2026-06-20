@@ -15,6 +15,7 @@ The dashboard organizes AnarchI work into deterministic system layers:
 - Risk, compliance, and review posture.
 - Product, treasury, and investor surfaces.
 - Public-safe operating narrative.
+- Sellable product surfaces and reusable standalone assets.
 
 ## Current State
 
@@ -27,6 +28,8 @@ This is a static prototype that can be opened directly in a browser. It is desig
 |-- index.html
 |-- styles.css
 |-- scripts/
+|   |-- dashboard-data.mjs
+|   |-- dashboard.mjs
 |   `-- validate-dashboard.mjs
 `-- README.md
 ```

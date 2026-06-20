@@ -6,6 +6,7 @@
     <meta name="description" content="Presentation-safe operating dashboard prototype for AnarchI Technologies.">
     <title>AnarchI Core Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="scripts/dashboard.mjs"></script>
   </head>
   <body>
     <main class="dashboard">
@@ -46,23 +47,27 @@
       </section>
 
       <section class="workspace" aria-label="System map">
-        <div class="rail">
-          <button class="active" type="button">Overview</button>
-          <button type="button">Signals</button>
-          <button type="button">Engines</button>
-          <button type="button">Controls</button>
+        <div class="rail" data-validate="scenario-tabs">
+          <button class="active" type="button" data-scenario="overview">Overview</button>
+          <button type="button" data-scenario="signals">Signals</button>
+          <button type="button" data-scenario="engines">Engines</button>
+          <button type="button" data-scenario="controls">Controls</button>
         </div>
 
         <div class="panel" data-validate="operating-model">
           <div class="panel-header">
             <div>
-              <p class="eyebrow">Operating model</p>
-              <h2>From raw signal to governed action</h2>
+              <p class="eyebrow" id="scenario-eyebrow">Operating model</p>
+              <h2 id="scenario-title">From raw signal to governed action</h2>
             </div>
-            <span class="badge">Prototype</span>
+            <span class="badge" id="scenario-badge">Prototype</span>
           </div>
 
-          <div class="flow">
+          <p class="scenario-copy" id="scenario-copy">
+            A deterministic control plane that converts raw operating signals into reviewed, auditable action.
+          </p>
+
+          <div class="flow" id="scenario-flow">
             <article>
               <span>01</span>
               <h3>Capture</h3>
@@ -85,6 +90,27 @@
             </article>
           </div>
         </div>
+      </section>
+
+      <section class="sellable-grid" aria-label="Sellable system surfaces" data-validate="sellable-grid">
+        <article>
+          <p class="eyebrow">Sellable surface</p>
+          <h2>Visual Systems</h2>
+          <p>Deterministic brand packs, overlay drops, and marketplace-ready offer ladders.</p>
+          <strong>Customer-facing product</strong>
+        </article>
+        <article>
+          <p class="eyebrow">Sellable surface</p>
+          <h2>Core Engine</h2>
+          <p>Runtime-gated local resource and launch planner for heavy workloads.</p>
+          <strong>Operator product</strong>
+        </article>
+        <article>
+          <p class="eyebrow">Sellable surface</p>
+          <h2>Offer Engine</h2>
+          <p>Standalone deterministic packaging logic for starter, pro, and studio tiers.</p>
+          <strong>Reusable business system</strong>
+        </article>
       </section>
 
       <section class="proof-strip" aria-label="Proof and validation">

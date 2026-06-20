@@ -159,6 +159,14 @@ h1 {
   font-size: clamp(1.5rem, 3vw, 2.6rem);
 }
 
+.scenario-copy {
+  max-width: 760px;
+  margin: -10px 0 24px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
 .badge {
   align-self: start;
   padding: 8px 10px;
@@ -211,6 +219,41 @@ h1 {
   line-height: 1.45;
 }
 
+.sellable-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.sellable-grid article {
+  min-height: 220px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(186, 139, 45, 0.12), transparent),
+    rgba(255, 253, 248, 0.82);
+}
+
+.sellable-grid h2 {
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+}
+
+.sellable-grid p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.sellable-grid strong {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 8px 10px;
+  background: var(--green);
+  color: white;
+  font-size: 0.82rem;
+}
+
 .proof-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -248,7 +291,8 @@ h1 {
   }
 
   .status-grid,
-  .flow {
+  .flow,
+  .sellable-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -274,6 +318,7 @@ h1 {
   .status-grid,
   .flow,
   .rail,
+  .sellable-grid,
   .proof-strip {
     grid-template-columns: 1fr;
   }
